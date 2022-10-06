@@ -1,5 +1,6 @@
 import React from "react"
-import "../Item/Item.css";
+import "./Artist.css";
+
 
 class Artist extends React.Component{
 
@@ -10,7 +11,10 @@ class Artist extends React.Component{
     render(){
     return(
         <>
+        <section className="Artist">
+            <p >Artiest</p>
             <li  >{this.props.name}</li>
+            </section>
         </>
         )
     }

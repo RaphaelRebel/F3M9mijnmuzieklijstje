@@ -10,7 +10,7 @@ class Input extends React.Component {
         }
 
         update = (event) => {
-            this.setState({inputValue: event.target.value, inputValueArtist: event.target.value}
+            this.setState({inputValue: event.target.value}
         )}
 
         enter = (event) => {

@@ -12,7 +12,7 @@ class Todo extends React.Component{
         super(props)
         this.state = {
             songs: [],
-            artists: [],
+            // artists: [],
         }
 
         
@@ -47,18 +47,18 @@ class Todo extends React.Component{
         })
     }
 
-    inputPressedEnterArtist = (inputFromInputComponentArtist) => {
-        console.log('hier')
-        console.log(inputFromInputComponentArtist)
-        let toBeAdded = [{
-            name: inputFromInputComponentArtist,
-        }]
+    // inputPressedEnterArtist = (inputFromInputComponentArtist) => {
+    //     console.log('hier')
+    //     console.log(inputFromInputComponentArtist)
+    //     let toBeAdded = [{
+    //         name: inputFromInputComponentArtist,
+    //     }]
 
-       let mergedArtistArray = this.state.artists.concat(toBeAdded);
-        this.setState({
-            artists: mergedArtistArray,    
-        })
-    }
+    //    let mergedArtistArray = this.state.artists.concat(toBeAdded);
+    //     this.setState({
+    //         songs: mergedArtistArray,    
+    //     })
+    // }
 
 
 
@@ -73,9 +73,9 @@ render(){
         return <Item done={task.done} name={task.name} key={task.id}></Item>
     });
 
-    let artists = this.state.artists.map(artist => {
-        return <Artist  name={artist.name}></Artist>
-    })
+    // let artists = this.state.songs.map(artist => {
+    //     return <Artist  name={artist.name}></Artist>
+    // })
 
     
 
@@ -89,10 +89,10 @@ render(){
             <ul className="todo__list">
                
                 {items}
-                {artists}
+                {/* {artists} */}
             </ul>
             <Input inputPressedEnter={this.inputPressedEnter} title="Nummer" inputValue={this.state.inputValue} />
-            <Input inputPressedEnterArtist={this.inputPressedEnterArtist} title="Artiest" inputValue={this.state.inputValue}/>
+            {/* <Input inputPressedEnterArtist={this.inputPressedEnterArtist} title="Artiest" inputValue={this.state.inputValue}/> */}
         </article>
         </>
     )}

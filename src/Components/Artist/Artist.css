@@ -1,0 +1,8 @@
+.Artist p{
+    color: grey
+}
+
+.Artist li{
+    margin: 2rem;
+    list-style-type: none;
+}
