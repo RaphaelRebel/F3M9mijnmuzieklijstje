@@ -13,7 +13,7 @@ class Artist extends React.Component{
         <>
         <section className="Artist">
             <p >Artiest</p>
-            <li  >{this.props.name}</li>
+            <li>{this.props.name}</li>
             </section>
         </>
         )

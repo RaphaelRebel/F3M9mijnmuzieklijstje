@@ -26,6 +26,16 @@ class Input extends React.Component {
         }
         }
 
+        click = () => {
+            if(this.props.title == "Nummer"){
+                this.props.inputPressedEnter(this.state.inputValue)
+            }
+            else if(this.props.title == "Artiest"){
+                this.props.inputPressedEnterArtist(this.state.inputValue)
+            }
+        }
+
+
 
         //Als we met document.element of document.query in react dan is de component uncontrolled
         render(){
@@ -33,7 +43,7 @@ class Input extends React.Component {
         return(
             <>
             <input onKeyUp={this.enter} value={this.props.inputValue}  onChange={this.update} className="input" type="text" placeholder={this.props.title}/>
-            
+            <button className="click" onClick={this.click}>Klik</button>
             </>
         );
     }
